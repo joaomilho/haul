@@ -59,7 +59,6 @@ const getDefaultConfig = ({
   const platformProgressBar = haulProgressBar(platform);
   return {
     context: root,
-    devtool: bundle ? 'source-map' : 'eval-source-map',
     entry: [],
     output: {
       path: path.join(root, 'dist'),
@@ -154,7 +153,7 @@ const getDefaultConfig = ({
                  * We need to use the plugin to configutr *.bundle to get minified
                  * Also disable IE8 support as we don't need it'
                  */
-                test: /\.(js|bundle)($|\?)/i,
+                test: /\.(js|(js)?bundle)($|\?)/i,
                 sourceMap: true,
                 compress: {
                   screw_ie8: true,
