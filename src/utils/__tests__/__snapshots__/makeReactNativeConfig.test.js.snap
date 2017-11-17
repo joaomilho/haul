@@ -89,7 +89,7 @@ Array [
         "moduleFilenameTemplate": "webpack:///[resourcePath]",
         "options": Object {
           "filename": "[file].map",
-          "test": /\\\\\\.\\(js\\|css\\|bundle\\)\\(\\$\\|\\\\\\?\\)/i,
+          "test": /\\\\\\.\\(js\\|css\\|\\(js\\)bundle\\)\\(\\$\\|\\\\\\?\\)/i,
         },
         "sourceMapFilename": "[file].map",
         "sourceMappingURLComment": "
@@ -214,7 +214,7 @@ Array [
         "moduleFilenameTemplate": "webpack:///[resourcePath]",
         "options": Object {
           "filename": "[file].map",
-          "test": /\\\\\\.\\(js\\|css\\|bundle\\)\\(\\$\\|\\\\\\?\\)/i,
+          "test": /\\\\\\.\\(js\\|css\\|\\(js\\)bundle\\)\\(\\$\\|\\\\\\?\\)/i,
         },
         "sourceMapFilename": "[file].map",
         "sourceMappingURLComment": "

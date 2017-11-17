@@ -129,8 +129,8 @@ const getDefaultConfig = ({
       }),
       /**
        * By default, sourcemaps are only generated with *.js files
-       * We need to use the plugin to configure *.bundle (Android)
-       * and *.jsbundle (iOS) to emit sourcemap
+       * We need to use the plugin to configure *.bundle (Android, iOS - development)
+       * and *.jsbundle (iOS - production) to emit sourcemap
        */
       new webpack.SourceMapDevToolPlugin({
         test: /\.(js|css|(js)bundle)($|\?)/i,
@@ -151,8 +151,9 @@ const getDefaultConfig = ({
               new webpack.optimize.UglifyJsPlugin({
                 /**
                  * By default, uglify only minifies *.js files
-                 * We need to use the plugin to configute *.bundle (Android) and *.jsbundle (iOS)
-                 * to get minified. Also disable IE8 support as we don't need it.
+                 * We need to use the plugin to configure *.bundle (Android, iOS - development) 
+                 * and *.jsbundle (iOS - production) to get minified. 
+                 * Also disable IE8 support as we don't need it.
                  */
                 test: /\.(js|(js)?bundle)($|\?)/i,
                 sourceMap: true,
