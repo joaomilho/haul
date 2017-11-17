@@ -150,8 +150,8 @@ const getDefaultConfig = ({
               new webpack.optimize.UglifyJsPlugin({
                 /**
                  * By default, uglify only minifies *.js files
-                 * We need to use the plugin to configutr *.bundle to get minified
-                 * Also disable IE8 support as we don't need it'
+                 * We need to use the plugin to configute *.bundle (Android) and *.jsbundle (iOS)
+                 * to get minified. Also disable IE8 support as we don't need it.
                  */
                 test: /\.(js|(js)?bundle)($|\?)/i,
                 sourceMap: true,
